@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from sqlalchemy import text
 from app.database import engine, Base
-import app.models
+import app.models # registers models with Base.metadata
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
